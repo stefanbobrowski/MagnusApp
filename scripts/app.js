@@ -1,3 +1,4 @@
+/* Stefan Bobrowski */
 angular.module('ItemShop', [])
     .controller('ItemCtrl', ['$scope', function($scope) {
 
@@ -12,11 +13,7 @@ angular.module('ItemShop', [])
 
         $scope.alert = "success";
 
-        /**
-         * @param status
-         *
-         * Displays a success or error alert with given message
-         */
+        /* Display custom error or success message */
         function displayAlert(status, message) {
             $scope.alert = message;
             $('.alert').addClass('show-alert ' + status);
@@ -25,13 +22,13 @@ angular.module('ItemShop', [])
             }, 3000);
         }
 
-        /*-- Add Item --*/
+        /*-- Add item form --*/
         $scope.addToInventory = function() {
             var itemExistsInventory;
             var priceDiffer = true;
 
+            /* Check for duplicate item in inventory list */
             angular.forEach($scope.inventory, function (eachItem) {
-                /* If there is a duplicate item in Inventory... */
                 if($scope.title.toLowerCase() == eachItem.title.toLowerCase()) {
                     itemExistsInventory = true;
                     if($scope.price == eachItem.price) {
@@ -42,12 +39,12 @@ angular.module('ItemShop', [])
                 }
             });
 
-            /* error handling */
+            /* Error - duplicate item in inventory */
             if(itemExistsInventory && priceDiffer == true) {
                 displayAlert('error', $scope.title + " must be same price as in inventory");
                 return;
             }
-            /* If item doesn't exist, add as new item */
+            /* If there is no duplicate item, add a new item to inventory list */
             if(!itemExistsInventory) {
                 $scope.inventory.push({title: $scope.title, price: $scope.price, quantity: $scope.quantity});
                 displayAlert('success', $scope.quantity + " " + $scope.title + " added to Inventory");
@@ -63,13 +60,13 @@ angular.module('ItemShop', [])
         $scope.addToCart = function(item, addToCartValue) {
             var itemExistsCart;
 
-            /* error handling */
+            /* Error - number validation */
             if(!addToCartValue) {
                 displayAlert('error', "Enter a valid number of " + item.title + " to add to cart");
                 return;
             }
+            /* Check for duplicate item in Cart */
             angular.forEach($scope.cart, function(eachItem) {
-                /* If there is a duplicate item in Shopping Cart... */
                 if(item.title.toLowerCase() == eachItem.title.toLowerCase()) {
                     itemExistsCart = true;
                     /* update quantity of item in both lists */
@@ -79,13 +76,14 @@ angular.module('ItemShop', [])
                     if(item.quantity <= 0) {
                         $scope.inventory.splice($scope.inventory.indexOf(item), 1);
                     }
+                    /* Success - Add new item quantity to item in Cart */
                     displayAlert('success', addToCartValue + " " + item.title + " added to cart");
                 }
             });
 
-            /* If there is no duplicate item in Shopping Cart... */
+            /* If there is no duplicate item in Cart, add to Cart */
             if(!itemExistsCart) {
-                /* update quantity */
+                /* update quantity in inventory list */
                 item.quantity -= addToCartValue;
                 if(item.quantity <= 0) {
                     $scope.inventory.splice($scope.inventory.indexOf(item), 1);
@@ -95,13 +93,14 @@ angular.module('ItemShop', [])
                 if(! $('.shopping-cart').hasClass('visible')) {
                     $('.shopping-cart').toggleClass('visible');
                 }
+                /* Success - Add new item to Cart */
                 displayAlert('success', addToCartValue + " " + item.title + " added to cart");
             }
         };
 
         /* Remove from Inventory */
         $scope.removeFromInventory = function(item, removeFromInventoryValue) {
-            /* error handling */
+            /* Error - number validation */
             if(!removeFromInventoryValue || removeFromInventoryValue > item.quantity) {
                 displayAlert('error', "Enter a valid number of " + item.title + " to remove from inventory");
                 return;
@@ -111,6 +110,8 @@ angular.module('ItemShop', [])
             if(item.quantity <= 0) {
                 $scope.inventory.splice($scope.inventory.indexOf(item), 1);
             }
+
+            /* Success - Remove item from inventory */
             displayAlert('success', removeFromInventoryValue + " " + item.title + " removed from inventory");
         };
 
@@ -119,13 +120,13 @@ angular.module('ItemShop', [])
         /* Remove from Cart */
         $scope.removeFromCart = function(item, removeFromCartValue) {
             var itemExistsInventory;
-            /* error handling */
+            /* Error - number validation */
             if(!removeFromCartValue || removeFromCartValue > item.quantity) {
                 displayAlert('error', "Enter a valid number of " + item.title + " to remove from cart");
                 return;
             }
+            /* Check for duplicate item in Inventory List... */
             angular.forEach($scope.inventory, function(eachItem) {
-                /* If there is a duplicate item in Inventory List... */
                 if(item.title.toLowerCase() == eachItem.title.toLowerCase()) {
                     itemExistsInventory = true;
 
@@ -135,6 +136,7 @@ angular.module('ItemShop', [])
                         $scope.cart.splice($scope.cart.indexOf(item), 1);
                     }
                     eachItem.quantity = parseInt(eachItem.quantity) + removeFromCartValue;
+                    /* Success - remove item from Cart */
                     displayAlert('success', removeFromCartValue + " " + item.title + " removed from Cart");
                 }
             });
@@ -148,6 +150,7 @@ angular.module('ItemShop', [])
                 }
                 /* add item to Inventory */
                 $scope.inventory.push({title: item.title, price: item.price, quantity: removeFromCartValue});
+                /* Success - Remove item from cart and put in Inventory */
                 displayAlert('success', removeFromCartValue + " " + item.title + " removed from Cart")
             }
         };
