@@ -13,11 +13,7 @@ $(document).ready(function() {
         }
     });
 
-    /* Shopping Cart button open */
-    $('.view-cart').on('click', function(e) {
-        $('.shopping-cart').toggleClass('visible');
-        e.preventDefault();
-    })
+
 
     /* Scrolls to an element specified by the given id */
     function scrollTo(id){
@@ -42,4 +38,10 @@ $(document).ready(function() {
             $('.shopping-cart').removeClass('visible');
         }
     });
+
+    /* Shopping Cart button open */
+    $('.view-cart').on('click', function(e) {
+        $('.shopping-cart').toggleClass('visible');
+        e.preventDefault();
+    })    
 });

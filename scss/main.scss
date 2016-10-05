@@ -83,6 +83,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     color: $default;
+    overflow-x: hidden;
 }
 
 p {
@@ -131,6 +132,7 @@ header.main {
     position: relative;
     text-align: center;
     height: 100vh;
+    padding: 10px;
     background: url('../images/hero-bg.jpg') center center;
     background-size: cover;
     color: #fff;
@@ -213,6 +215,10 @@ section {
     margin: 20px 0 21px 0;
     padding: 40px;
     border-radius: 10px;
+
+    @media screen and (max-width: 600px) {
+        padding: 10px;
+    }
 }
 
 /* Item Shop App */
@@ -223,6 +229,10 @@ section {
         padding: 10px;
         border: 1px solid #fff;
         border-collapse: collapse;
+
+        @media screen and (max-width: 600px) {
+            padding: 5px;
+        }
     }
 }
 
@@ -303,6 +313,10 @@ section {
         letter-spacing: 1px;
         text-transform: uppercase;
         font-size: .9375em;
+
+        @media screen and (max-width: 600px) {
+            font-size: 0.6em;
+        }
     }
 
     th, td {
@@ -312,6 +326,20 @@ section {
 
         &.quantity {
             text-align: right;
+        }
+
+        &.desktop {
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            display: none;
+
+            @media screen and (max-width: 600px) {
+                display: block;
+            }
         }
     }
 
@@ -333,6 +361,10 @@ section {
         padding: 8px 5px 8px 10px;
         font-family: $font-4;
         border: 0;
+
+        @media screen and (max-width: 600px) {
+            margin-right: 0;
+        }
     }
 
     button {
@@ -346,6 +378,11 @@ section {
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: background-color 0.3s ease;
+
+        @media screen and (max-width: 600px) {
+            padding: 4px 5px;
+            font-size: 0.6em;
+        }
 
         &:hover {
             background-color: $button-hover;
