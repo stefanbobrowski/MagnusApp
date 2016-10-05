@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Homestead';
+	src: url('../fonts/Homestead-Regular.eot');
+	src: url('../fonts/Homestead-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Homestead-Regular.woff2') format('woff2'),
+		url('../fonts/Homestead-Regular.woff') format('woff'),
+		url('../fonts/Homestead-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cider';
+	src: url('../fonts/Cider-Script.eot');
+	src: url('../fonts/Cider-Script.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Cider-Script.woff2') format('woff2'),
+		url('../fonts/Cider-Script.woff') format('woff'),
+		url('../fonts/Cider-Script.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
