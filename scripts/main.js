@@ -13,8 +13,6 @@ $(document).ready(function() {
         }
     });
 
-
-
     /* Scrolls to an element specified by the given id */
     function scrollTo(id){
         $('html,body').animate({scrollTop: $("#"+id).offset().top}, 600);
@@ -31,17 +29,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    /* Close shopping cart on body click */
-    $("body").mouseup(function(e) {
-        var subject = $(".shopping-cart.visible");
-        if(e.target.id != subject.attr('class') && !subject.has(e.target).length) {
-            $('.shopping-cart').removeClass('visible');
-        }
-    });
 
-    /* Shopping Cart button open */
-    $('.view-cart').on('click', function(e) {
-        $('.shopping-cart').toggleClass('visible');
-        e.preventDefault();
-    })    
+    /* Shopping Cart open */
+        $('body').on('click', function(e) {
+            var target = $(e.target);
+
+            if (target.hasClass('view-cart')) {
+                $('.shopping-cart').toggleClass('visible');
+                e.preventDefault();
+            } else if (target.closest('.shopping-cart').length < 1) {
+                $('.shopping-cart').removeClass('visible');
+            }
+        });
 });
