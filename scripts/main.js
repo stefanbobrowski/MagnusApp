@@ -37,4 +37,14 @@ $(document).ready(function() {
         e.preventDefault();
     })
 
+    $("body").mouseup(function(e)
+    {
+        var subject = $(".shopping-cart.visible");
+
+        if(e.target.id != subject.attr('class') && !subject.has(e.target).length)
+        {
+            $('.shopping-cart').removeClass('visible');
+        }
+    });
+
 });
