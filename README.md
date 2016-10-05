@@ -1,4 +1,4 @@
-# ItemShop
+# ItemShop by Stefan Bobrowski
 Sample shopping cart app. Made with angularjs.
 
 Instructions:
