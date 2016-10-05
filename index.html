@@ -60,7 +60,7 @@
                             <td class="quantity">{{item.quantity}}</td>
                             <td>
                                 <input type="number" ng-model="addToCartValue" min="1" max="{{item.quantity}}">
-                                <button ng-click="addToCart(item, addToCartValue)">Add to Cart</button>
+                                <button ng-click="addToCart(item, addToCartValue)" class="add-button">Add to Cart</button>
                             </td>
                             <td>
                                 <input type="number" ng-model="removeFromInventoryValue" min="1" max="{{item.quantity}}">

@@ -91,7 +91,7 @@ angular.module('ItemShop', [])
                 /* add item to Shopping Cart */
                 $scope.cart.push({title: item.title, price: item.price, quantity: addToCartValue});
                 if(! $('.shopping-cart').hasClass('visible')) {
-                    $('.shopping-cart').toggleClass('visible');
+                    $('.shopping-cart').addClass('visible');
                 }
                 /* Success - Add new item to Cart */
                 displayAlert('success', addToCartValue + " " + item.title + " added to cart");

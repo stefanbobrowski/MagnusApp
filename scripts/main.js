@@ -29,7 +29,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-
     /* Shopping Cart open */
         $('body').on('click', function(e) {
             var target = $(e.target);
@@ -37,7 +36,7 @@ $(document).ready(function() {
             if (target.hasClass('view-cart')) {
                 $('.shopping-cart').toggleClass('visible');
                 e.preventDefault();
-            } else if (target.closest('.shopping-cart').length < 1) {
+            } else if (target.closest('.shopping-cart').length < 1  && !target.is('.add-button')) {
                 $('.shopping-cart').removeClass('visible');
             }
         });
