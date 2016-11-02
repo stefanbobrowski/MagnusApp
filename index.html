@@ -4,104 +4,47 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Stefan Bobrowski - Item Shop</title>
+        <title>The Eye of Terra</title>
         <!-- stylesheets -->
         <link rel="stylesheet" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
         <!-- javascript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="//npmcdn.com/angular@latest/angular.js"></script>
+        <script src="//npmcdn.com/angular-ui-router@1.0.0-alpha.4/release/angular-ui-router.js"></script>
         <script src="js/main.js"></script>
+        <script src="magnusApp.js"></script>
+        <script src="services/primarchs.js"></script>
+        <script src="services/novels.js"></script>
+        <script src="components/home.js"></script>
+        <script src="components/primarchs.js"></script>
+        <script src="components/primarch.js"></script>
+        <script src="components/novels.js"></script>
+        <script src="components/novel.js"></script>
     </head>
-    <body ng-app="ItemShop" ng-controller="ItemCtrl">
+    <body ng-app="MagnusApp">
 
-        <header class="main">
-            <a href="#" class="view-cart">View Cart</a>
+        <header>
+            <div class="container">
+                <h1>The Eye of Terra</h1>
+                <nav>
+                    <a ui-sref="home" ui-sref-active="active">Home</a>
+                    <a ui-sref="primarchs" ui-sref-active="active">Primarchs</a>
+                    <a ui-sref="novels" ui-sref-active="active">Novels</a>
+                </nav>
+            </div>
         </header>
 
-        <div class="hero">
-            <div class="hero-title">
-                <h1>Adventure World</h1>
-                <h2>Gear up for your next adventure</h2>
-            </div>
-            <!-- Shopping Cart Button -->
-            <img class="hero-chevron scroll-to-content" src="images/chevron.png">
-        </div>
-
-        <section class="item-shop" id="item-shop">
+        <section class="main">
             <div class="container">
-                <!-- Add Item -->
-                <div class="add-item">
-                    <a href="#" class="toggle-add-item-form"><img src="images/plus-icon.png" alt="Add Item to Inventory" /><span>add item</span></a>
-                    <form class="add-item-form" ng-submit="addToInventory()">
-                        <label for="item-name">Item Name</label>
-                        <input type="text" id="item-name" ng-model="title" placeholder="e.g., Backpack, travel supplies" required />
-                        <label for="item-price">Price (in dollars)</label>
-                        <input type="number" id="item-price" ng-model="price" min="1" max="99999" placeholder="e.g., 100" required />
-                        <label for="item-quantity">Quantity</label>
-                        <input type="number" ng-model="quantity" id="item-quantity" min="1" max="99999" placeholder="e.g., 99" required>
-                        <button type="submit">Add</button>
-                    </form>
-                </div>
-                <!-- Inventory -->
-                <div class="products">
-                    <h1 class="section-title">Products</h1>
-                    <table>
-                        <tr>
-                            <th class="desktop">Item Name</th><th class="mobile">Item</th>
-                            <th>Price</th>
-                            <th class="desktop quantity">Quantity</th><th class="mobile">Qty</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr  class="inventory-item" ng-repeat="item in inventory">
-                            <td>{{item.title}}</td>
-                            <td>${{item.price}}</td>
-                            <td class="quantity">{{item.quantity}}</td>
-                            <td>
-                                <input type="number" ng-model="addToCartValue" min="1" max="{{item.quantity}}">
-                                <button ng-click="addToCart(item, addToCartValue)" class="add-button">Add to Cart</button>
-                            </td>
-                            <td>
-                                <input type="number" ng-model="removeFromInventoryValue" min="1" max="{{item.quantity}}">
-                                <button ng-click="removeFromInventory(item, removeFromInventoryValue)">Remove</button>
-                            </td>
-                        </tr>
-                        <tr class="no-items">
-                            <td>There are no products</td>
-                        </tr>
-                    </table>
-                </div>
+                <ui-view></ui-view>
             </div>
         </section>
 
-        <!-- Shopping Cart -->
-        <div class="shopping-cart">
-            <h1 class="section-title">Shopping Cart</h1>
-            <div class="column-names">
-                <span>Item Name</span>
-                <span>Price</span>
-                <span>Quantity</span>
-            </div>
-            <div class="cart-item" ng-repeat="item in cart" >
-                <div class="item-info">
-                    <span>{{item.title}}</span>
-                    <span class="price">${{item.price}}</span>
-                    <span>{{item.quantity}}</span>
-                </div>
-                <div class="remove-item">
-                    <input type="number" ng-model="removeFromCartValue" min="1" max="{{item.quantity}}" required>
-                    <button ng-click="removeFromCart(item, removeFromCartValue)">X</button>
-                </div>
-            </div>
-            <div class="no-items">
-                <span>There are no items in your cart</span>
-            </div>
-        </div>
+       <uir-state-vis class="statevis" width="300" height="100"></uir-state-vis>
 
         <!-- Alerts -->
         <div class="alert">
-            <span>{{alert}}</span>
         </div>
 
         <footer>

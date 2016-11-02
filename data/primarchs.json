@@ -1,0 +1,182 @@
+[
+    {
+        "id": "1",
+        "name": "Lion El' Johnson",
+        "alias": "The Lion",
+        "legionNum": "I",
+        "legionName": "Dark Angels",
+        "homeworld": "Caliban",
+        "weapon": "Sword"
+    },
+    {
+        "id": "2",
+        "name": "Unknown",
+        "alias": "Unknown",
+        "legionNum": "II",
+        "legionName": "Unknown",
+        "homeworld": "Unknown",
+        "weapon": "Unknown"
+    },
+    {
+        "id": "3",
+        "name": "Fulgrim",
+        "alias": "The Phoenician",
+        "legionNum": "III",
+        "legionName": "Emperor's Children",
+        "homeworld": "Chemos",
+        "weapon": "Sword"
+    },
+    {
+        "id": "4",
+        "name": "Perturabo",
+        "alias": "The Lord of Iron",
+        "legionNum": "IV",
+        "legionName": "Iron Warriors",
+        "homeworld": "Olympia",
+        "weapon": "Mace"
+    },
+    {
+        "id": "5",
+        "name": "Jaghatai Khan",
+        "alias": "The Great Khan",
+        "legionNum": "V",
+        "legionName": "White Scars",
+        "homeworld": "Munus Planus",
+        "weapon": "Sword"
+    },
+    {
+        "id": "6",
+        "name": "Leman Russ",
+        "alias": "The Wolf King",
+        "legionNum": "VI",
+        "legionName": "Space Wolves",
+        "homeworld": "Fenris",
+        "weapon": "Sword/Claw"
+    },
+    {
+        "id": "7",
+        "name": "Rogal Dorn",
+        "alias": "The Praetorian of Terra",
+        "legionNum": "VII",
+        "legionName": "Imperial Fists",
+        "homeworld": "Inwit",
+        "weapon": "Bolter 'Voice of Terra', Chainblade 'Storm's Teeth'"
+    },
+    {
+        "id": "8",
+        "name": "Konrad Curze",
+        "alias": "The Night Haunter",
+        "legionNum": "VIII",
+        "legionName": "Night Lords",
+        "homeworld": "Nostramo",
+        "weapon": "Claws"
+    },
+    {
+        "id": "9",
+        "name": "Sanguinius",
+        "alias": "The Angel",
+        "legionNum": "IX",
+        "legionName": "Blood Angels",
+        "homeworld": "Baal",
+        "weapon": "Sword"
+    },
+    {
+        "id": "10",
+        "name": "Ferrus Manus",
+        "alias": "The Gorgon",
+        "legionNum": "X",
+        "legionName": "Iron Hands",
+        "homeworld": "Medusa",
+        "weapon": "Hammer, sword, hands"
+    },
+    {
+        "id": "11",
+        "name": "Unknown",
+        "alias": "Unknown",
+        "legionNum": "XI",
+        "legionName": "Unknown",
+        "homeworld": "Unknown",
+        "weapon": "Unknown"
+    },
+    {
+        "id": "12",
+        "name": "Angron",
+        "alias": "The Red Angel, The Undefeated",
+        "legionNum": "XII",
+        "legionName": "World Eaters",
+        "homeworld": "Nuceria",
+        "weapon": "Great Axe"
+    },
+    {
+        "id": "13",
+        "name": "Roboute Guilliman",
+        "alias": "The Avenging Son",
+        "legionNum": "XIII",
+        "legionName": "Ultramarines",
+        "homeworld": "Macragge, Ultramar",
+        "weapon": "Claw, Power Fist"
+    },
+    {
+        "id": "14",
+        "name": "Mortarion",
+        "alias": "The Death Lord",
+        "legionNum": "XIV",
+        "legionName": "Death Guard",
+        "homeworld": "Barbarus",
+        "weapon": "Great Scythe"
+    },
+    {
+        "id": "15",
+        "name": "Magnus the Red",
+        "alias": "The Crimson King",
+        "legionNum": "XV",
+        "legionName": "Thousand Sons",
+        "homeworld": "Prospero",
+        "weapon": "Mind, Great Axe"
+    },
+    {
+        "id": "16",
+        "name": "Horus Lupercal",
+        "alias": "The Warmaster, The First Primarch",
+        "legionNum": "XVI",
+        "legionName": "Luna Wolves, Sons of Horus",
+        "homeworld": "Cthonia",
+        "weapon": "Hammer, Lightning Claw, Fist Hand-cannon"
+    },
+    {
+        "id": "17",
+        "name": "Lorgar Aurelian",
+        "alias": "The Urizen",
+        "legionNum": "XVII",
+        "legionName": "Word Bearers",
+        "homeworld": "Colchis",
+        "weapon": "Great Hammer"
+    },
+    {
+        "id": "18",
+        "name": "Vulkan",
+        "alias": "The Lord of Drakes",
+        "legionNum": "XVIII",
+        "legionName": "Salamanders",
+        "homeworld": "Nocturne",
+        "weapon": "Hammer, Plasma Cannon"
+    },
+    {
+        "id": "19",
+        "name": "Corvus Corax",
+        "alias": "The Raven Lord",
+        "legionNum": "XIX",
+        "legionName": "Raven Guard",
+        "homeworld": "Deliverance",
+        "weapon": "Claws, jump pack wings"
+    },
+    {
+        "id": "20",
+        "name": "Alpharius Omegon",
+        "alias": "The Lord of Serpents",
+        "legionNum": "XX",
+        "legionName": "Alpha Legion",
+        "homeworld": "Unknown",
+        "weapon": "Bolter"
+    }
+]

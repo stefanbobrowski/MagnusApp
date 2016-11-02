@@ -22,7 +22,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   gulp.src('scripts/**/*.js')
       .pipe(concat('main.js'))
-      .pipe(uglify())
+      .pipe(uglify({mangle:false}))
       .pipe(gulp.dest('js'));
 })
 
@@ -37,4 +37,5 @@ gulp.task('default', ['browserSync'], function (){
   gulp.watch('scss/**/*.scss',['styles'], browserSync.reload);
   gulp.watch('scripts/**/*.js',['scripts'], browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
+  gulp.watch('pages/*.html', browserSync.reload);
 });

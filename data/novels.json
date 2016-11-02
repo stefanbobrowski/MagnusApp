@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "title": "Horus Rising",
+        "subtitle": "The seeds of Heresy are sown",
+        "author": "Dan Abnett",
+        "release": "2006"
+    },
+    {
+        "id": "2",
+        "title": "False Gods",
+        "subtitle": "The Heresy takes root",
+        "author": "Graham McNeill",
+        "release": "2006"
+    },
+    {
+        "id": "3",
+        "title": "Galaxy in Flames",
+        "subtitle": "The Heresy revealed",
+        "author": "Ben Counter",
+        "release": "2006"
+    },
+    {
+        "id": "4",
+        "title": "The Flight of Eisenstein",
+        "subtitle": "The heresy unfolds",
+        "author": "James Swallow",
+        "release": "2007"
+    },
+    {
+        "id": "5",
+        "title": "Fulgrim",
+        "subtitle": "Visions of treachery",
+        "author": "Graham McNeill",
+        "release": "2007"
+    }
+]
