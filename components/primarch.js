@@ -2,7 +2,7 @@ angular.module('MagnusApp').component('primarch', {
   bindings: { primarch: '<' },
   template:
             '<div class="breadcrumbs"><a ui-sref="primarchs">Primarchs</a> / {{$ctrl.primarch.name}}</div>' +
-            '<img src="../images/primarchs/primarch-{{$ctrl.primarch.id}}/primarch-{{$ctrl.primarch.id}}.jpg"' +
+            '<img src="images/primarchs/primarch-{{$ctrl.primarch.id}}/primarch-{{$ctrl.primarch.id}}.jpg"' +
             '<div>Name: {{$ctrl.primarch.name}}</div>' +
             '<div>Alias: {{$ctrl.primarch.alias}}</div>' +
             '<div>Legion: {{$ctrl.primarch.legionNum}}</div>' +
