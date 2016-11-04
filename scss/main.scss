@@ -109,6 +109,11 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
 // Structure
 
 header {
@@ -145,10 +150,28 @@ section {
         .container {
             margin: 20px 0;
             background: black;
+            overflow: hidden;
 
             home {
                 button {
                     margin-bottom: 20px;
+                }
+
+                .layout-2-col {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .left-col {
+                            width: 49%
+                        }
+
+                        .right-col {
+                            width: 49%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
                 }
 
             }
@@ -171,9 +194,9 @@ section {
 
             p {
                 max-width: 600px;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 300;
-                line-height: 26px;
+                line-height: 24px;
             }
         }
     }

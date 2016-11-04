@@ -33,5 +33,41 @@
         "subtitle": "Visions of treachery",
         "author": "Graham McNeill",
         "release": "2007"
+    },
+    {
+        "id": "6",
+        "title": "Descent of Angels",
+        "subtitle": "Loyalty and honour",
+        "author": "Mitchel Scanlon",
+        "release": "2007"
+    },
+    {
+        "id": "7",
+        "title": "Legion",
+        "subtitle": "Secrets and lies",
+        "author": "Dan Abnett",
+        "release": "2008"
+    },
+    {
+        "id": "8",
+        "title": "Battle for the Abyss",
+        "subtitle": "My brother, my enemy",
+        "author": "Ben Counter",
+        "release": "2008"
+    },
+    {
+        "id": "9",
+        "title": "Mechanicum",
+        "subtitle": "War comes to Mars",
+        "author": "Graham McNeill",
+        "release": "2008"
+    },
+    {
+        "id": "10",
+        "title": "Tales of Heresy",
+        "subtitle": "n/a",
+        "author": "Nick Kyme and Lindsey Priestley",
+        "release": "2009"
     }
+
 ]
