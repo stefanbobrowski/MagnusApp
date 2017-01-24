@@ -148,6 +148,7 @@ section {
         }
 
         .container {
+            position: relative;
             margin: 20px 0;
             background: black;
             overflow: hidden;
@@ -158,39 +159,79 @@ section {
                 }
 
                 .layout-2-col {
-                        display: flex;
-                        justify-content: space-between;
+                    display: flex;
+                    justify-content: space-between;
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                    }
 
-                        .left-col {
-                            width: 49%
+                    .left-col, .right-col {
+                        width: 49%;
+                        @media screen and (max-width: 768px) {
+                            width: 100%;
                         }
+                    }
 
-                        .right-col {
-                            width: 49%;
-
-                            img {
-                                width: 100%;
-                            }
+                    .left-col {
+                        @media screen and (max-width: 768px) {
+                            margin-bottom: 20px;
                         }
+                    }
+
+                    .right-col {
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
+            }
 
+            home {
+                a {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+
+                    &:hover {
+                        color: seagreen;
+                    }
+                }
             }
 
             primarch, novel {
+
                 img {
                     display: block;
+                    width: 100%;
+                    max-width: 300px;
                     margin-right: 40px;
                     float: left;
-                    max-width: 400px;
+                }
+
+                .arrow {
+                    display: block;
+                    width: 30px;
+                    height: 50px;
+                    position: absolute;
+                    bottom: 20px;
+                    background-size: cover;
+                    background-position: center;
+
+                    &.prev {
+                        left: 20px;
+                        background-image: url("../images/chevron-left.png");
+                    }
+
+                    &.next {
+                        right: 20px;
+                        background-image: url("../images/chevron-right.png");
+                    }
                 }
             }
-
 
             .breadcrumbs {
                 margin-bottom: 40px;
             }
-
-
 
             p {
                 max-width: 600px;
@@ -220,7 +261,6 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 
 footer {
     padding: 40px;

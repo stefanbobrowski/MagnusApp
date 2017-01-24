@@ -1,20 +1,14 @@
 angular.module('MagnusApp').component('home', {
     template:
-            '<h1>Welcome to the Eye of {{$ctrl.greeting}}!</h1>' +
-            '<button ng-click="$ctrl.toggleGreeting()">Toggle Title</button>' +
+            '<h1>Welcome to the Eye of Terra!</h1>' +
             '<div class="layout-2-col">' +
                 '<div class="left-col">' +
-
                     '<h2>The Imperial Archives</h2>' +
+                    '<p>Nestled alongside the great mountain walls of the Imperial Palace on Terra, this massive library stores all of mankinds progress from the onset of the 31st millennium.</p>' +
 
-                    '<p>This vast library, located inside the heart of the Imperial Palace on Terra, functions to preserve and catalog all of mankind\'s history. It even houses technological relics salvaged from the Dark Age of Technology</p>' +
-
-                    '<p>As humanity enters The Great Crusade, the Emperor of Mankind\'s grand initiative to reuinite humanity and spread the Imperial Truth throughout the galaxy, these archives will continue to grow.</p>' +
-
-                    '<p>Remembrancers have been tasked by the Emperor himself to record the triumphs of Imperial forces as they reconquer the stars. Their findings are sent here, to the Imperial Archives, where all can witness the glory of His legions and their respective primarchs.</p>' +
-
-                    '<p>Your access level includes the <a ui-sref="primarchs">Primarchs</a> and <a ui-sref="novels">Horus Heresy novels</a>. Enjoy your stay.</p>' +
-
+                    '<p>On this website we have narrowed that history down into these two links:</p>' +
+                    '<a ui-sref="novels">Horus Heresy novels</a>' +
+                    '<a ui-sref="primarchs">Primarchs</a></p>' +
                 '</div>' +
                 '<div class="right-col">' +
                     '<img src="images/home.jpg">' +

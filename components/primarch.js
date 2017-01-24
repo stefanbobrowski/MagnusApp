@@ -8,5 +8,16 @@ angular.module('MagnusApp').component('primarch', {
             '<div>Legion: {{$ctrl.primarch.legionNum}}</div>' +
             '<div>Legion Name: {{$ctrl.primarch.legionName}}</div>' +
             '<div>Homeworld: {{$ctrl.primarch.homeworld}}</div>' +
-            '<div>Weapon of choice: {{$ctrl.primarch.weapon}}</div>'
+            '<div>Weapon of choice: {{$ctrl.primarch.weapon}}</div>' +
+            '<a class="arrow prev" ui-sref="primarch({ primarchId: $ctrl.primarch.id - 0 - 1 })"></a>' +
+            '<a class="arrow next" ui-sref="primarch({ primarchId: $ctrl.primarch.id - 0 + 1 })"></a>',
+
+
+        controller: function() {
+
+            console.log("hello");
+
+
+
+        }
 });

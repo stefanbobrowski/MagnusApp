@@ -4,7 +4,8 @@
         "title": "Horus Rising",
         "subtitle": "The seeds of Heresy are sown",
         "author": "Dan Abnett",
-        "release": "2006"
+        "release": "2006",
+        "primarchs": ""
     },
     {
         "id": "2",
@@ -68,6 +69,83 @@
         "subtitle": "n/a",
         "author": "Nick Kyme and Lindsey Priestley",
         "release": "2009"
+    },
+    {
+        "id": "11",
+        "title": "Fallen Angels",
+        "subtitle": "Deceit and betrayal",
+        "author": "Mike Lee",
+        "release": "2009"
+    },
+    {
+        "id": "12",
+        "title": "A Thousand Sons",
+        "subtitle": "All is dust...",
+        "author": "Graham McNeill",
+        "release": "2010"
+    },
+    {
+        "id": "13",
+        "title": "Nemesis",
+        "subtitle": "War within the shadows",
+        "author": "James Swallow",
+        "release": "2010"
+    },
+    {
+        "id": "14",
+        "title": "The First Heretic",
+        "subtitle": "Fall to Chaos",
+        "author": "Aaron Dembski-Bowden",
+        "release": "2010"
+    },
+    {
+        "id": "15",
+        "title": "Prospero Burns",
+        "subtitle": "The Wolves unleashed",
+        "author": "Dan Abnett",
+        "release": "2010"
+    },
+    {
+        "id": "16",
+        "title": "Age of Darkness",
+        "subtitle": "n/a",
+        "author": "Christian Dunn",
+        "release": "2011"
+    },
+    {
+        "id": "17",
+        "title": "The Outcast Dead",
+        "subtitle": "The truth lies within",
+        "author": "Graham McNeill",
+        "release": "2011"
+    },
+    {
+        "id": "18",
+        "title": "Deliverance Lost",
+        "subtitle": "Ghosts of Terra",
+        "author": "Gav Thorpe",
+        "release": "2012"
+    },
+    {
+        "id": "19",
+        "title": "Know No Fear",
+        "subtitle": "The battle of Calth",
+        "author": "Dan Abnett",
+        "release": "2012"
+    },
+    {
+        "id": "20",
+        "title": "The Primarchs",
+        "subtitle": "n/a",
+        "author": "CHristian Dunn",
+        "release": "2012"
+    },
+    {
+        "id": "21",
+        "title": "Fear to Tread",
+        "subtitle": "The Angel falls",
+        "author": "James Swallow",
+        "release": "2012"
     }
 
 ]
