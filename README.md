@@ -1,5 +1,6 @@
 # MagnusApp
 ## A Horus Heresy themed wiki site. Made with angularjs.
+As seen here: http://stefanbobrowski.com/MagnusApp
 
 ### Showcases
 Components w/ templates <br />
