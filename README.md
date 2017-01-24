@@ -8,7 +8,7 @@ Routing <br />
 Nested Views <br />
 
 ### Commands
-git clone https://github.com/stefanbobrowski/MagnusApp.git
-cd MagnusApp
-npm install
-gulp
+git clone https://github.com/stefanbobrowski/MagnusApp.git <br />
+cd MagnusApp <br />
+npm install <br />
+gulp <br />
